@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            margin: 0 auto;
+            text-align: center;
+            width: 600px;
+            padding: 30px 0;
+        }
+        .flashing_effect{
+            font-size: 16px;
+            font-family: arial;
+            background: #ff0000;
+            padding: 12px 15px;
+            color: #fff;
+            border: 0;
+            border-radius: 5px;
+            animation-name: flashing;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            cursor: pointer;
+        }
+        @keyframes flashing{
+            0%{ 
+                opacity: 1.0;
+            }
+            25%{ 
+                opacity: 0.6;
+            }
+            50%{
+                opacity: 0.3;
+            }
+            75%{
+                opacity: 0.6;
+            }
+            100%{
+                opacity: 1.0;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <div class="wrapper">
+        <h3>How to make flashing button with Css3 keyframes Animation</h3>
+        <button class="flashing_effect">
+            Latest Offer
+        </button>
+    </div>
+</body>
+</html>
