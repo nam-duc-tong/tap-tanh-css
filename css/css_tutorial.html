@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+        crossorigin="anonymous">
+        </script>
+    <style>
+        .wrapper{
+            width: 500px;
+            margin: 0 auto;
+        }
+        .switch{
+            width: 200px;
+            height: 100px;
+            background: #E5e5e5;
+            z-index: 0;
+            margin: 0;
+            padding: 0;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            border-radius: 100px;
+        }
+        .switch:before{
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 5px;
+            width: 190px;
+            height: 90px;
+            background: #ffffff;
+            z-index: 1;
+            border-radius: 95px;
+        }
+        .switch:after{
+            content: '';
+            width: 88px;
+            height: 88px;
+            border-radius: 86px;
+            z-index: 2;
+            background: #ffffff;
+            position: absolute;
+            transition-duration: 500ms;
+            top: 6px;
+            left: 6px;
+            box-shadow: 0 2px 5px #999999;
+        }
+        .switchOn, .switchOn:before{
+            background: #4cd964 !important;
+
+        }
+        .switchOn:after{
+            left: 105px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper" align="center">
+        <br>
+            <label>
+                <input type="checkbox" name = "switch" class="checkbox">
+                <div class="switch"></div>
+            </label>
+        <br>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('.switch').click(function(){
+                $(this).toggleClass('switchOn');
+            });
+        });
+    </script>
+</body>
+</html>

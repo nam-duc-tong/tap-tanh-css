@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-size: cover;
+        }
+        #back_image{
+            background:url("beach.jpg");
+            width: 1170px;
+            height: 657px;
+        }
+        #vertical-text{
+            float: left;
+            transform: rotate(90deg);
+            transform-origin: left top 0;
+            margin-left: 80px; 
+            padding: 10px;
+            background-color: rgba(37, 34, 34, 0.3);
+            font-size: 36px;
+            text-transform: uppercase;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <br>
+    <br>
+    <div class="container">
+        <h1>Displaying text in Vertical Direction by using css</h1>
+        <div id="back_image">
+            <div id="vertical-text">Natural Beach</div>
+        </div>
+    </div>
+</body>
+</html>
